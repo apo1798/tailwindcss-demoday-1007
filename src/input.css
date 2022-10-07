@@ -1,0 +1,27 @@
+@tailwind base; /* tailwind 的全站樣式（aka 統一樣式）*/
+@tailwind components; /* tailwind 的 container 樣式 */
+@tailwind utilities; /* tailwind 的主要內容，所有的 utility class 在此引入 */
+
+@layer base {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  /* A button base shape. */
+  .btn {
+    @apply inline-block rounded py-2 px-4 font-bold;
+  }
+
+  /* A big variation of the button. */
+  .btn-big {
+    @apply text-md py-3 px-5;
+  }
+}
